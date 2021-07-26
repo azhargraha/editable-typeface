@@ -1,0 +1,164 @@
+.form-container {
+    width: 100%;
+    transition: box-shadow 250ms ease-in-out;
+}
+
+.form-container:hover {
+    box-shadow: inset -1px 0px 0px 0px var(--white-primary), inset 1px 0px 0px 0px var(--white-primary);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+    height: 0;
+    background: var(--white-primary);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    transition: all 250ms ease-in-out;
+}
+
+header.show {
+    border-bottom: var(--black-primary) solid 1px;
+    padding: 1.2em;
+    height: 12vh;
+}
+
+header * {
+    visibility: hidden;
+    opacity: 0;
+}
+
+header.show * {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 250ms ease-in-out,
+        opacity 250ms ease-in-out;
+}
+
+.close-btn {
+    margin-left: 5em;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+    height: 2.5em;
+    width: 2.5em;
+}
+
+.close-btn > svg line {
+    stroke: var(--grey-primary);
+    transition: stroke 150ms ease-in-out;
+}
+
+.close-btn:hover > svg line {
+    stroke: var(--black-primary);
+}
+
+.form-container > h1{
+    text-align: center;
+    padding: 1rem;
+    /* background: var(--black-primary); */
+    color: var(--white-primary);
+    overflow-x: hidden;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    resize: none;
+    width: 100%;
+    transition: background 250ms ease-in-out,
+        color 250ms ease-in-out;
+}
+
+.form-container > h1.active {
+    background: var(--white-primary);
+    color: var(--black-primary);
+}
+
+.form-container > h1::selection {
+    background: var(--black-primary);
+    color: var(--white-primary);
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--black-primary);
+}
+
+.button-container > h4 {
+    font-weight: 600;
+    margin-bottom: .8em;
+}
+
+.btns-container {
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"],
+input[type="range"],
+input[type="range"]::-webkit-slider-thumb {
+    outline: none;
+    appearance: none;
+}
+
+input[type="range"] {
+    background: var(--white-primary);
+    width: 80%;
+    height: .1rem;
+    border-radius: .5rem;
+    border: 1.8px solid var(--grey-primary);
+}
+
+button.btn-round,
+input[type="checkbox"],
+input[type="range"]::-webkit-slider-thumb {
+    background: var(--white-primary); 
+    outline: none;
+    border: 1.8px solid var(--grey-primary);
+    border-radius: 50%;
+    height: 1.5em;
+    width: 1.5em;
+    cursor: pointer;
+}
+
+hr {
+    width: .8em;
+    border: none;
+    border-top: var(--grey-primary) 1.8px solid;
+}
+
+button.btn-round.active,
+input[type="checkbox"]:checked,
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: var(--black-primary);
+    border: 1.8px solid var(--black-primary);
+}
+
+.btn-round:hover,
+input[type="checkbox"]:hover {
+    border: 1.8px solid var(--black-primary);
+}
+
+/* input[type="checkbox"].checkmark {
+    appearance: none;
+    background: transparent; 
+    border: 1.8px solid var(--grey-primary);
+    border-radius: 50%;
+    height: 1.5em;
+    width: 1.5em;
+    cursor: pointer;
+}
+
+input[type="checkbox"].checkmark:checked {
+    background: black; 
+    border: 1.8px solid var(--black-primary);
+}
+
+input[type="checkbox"].checkmark:hover {
+    border: 1.8px solid var(--black-primary);
+} */

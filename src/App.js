@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import Form from './component/Form'
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="video-bg">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/jLOfsMw6J90?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1&playlist=jLOfsMw6J90" frameBorder="0" allowFullScreen></iframe>
+      </div>
+      <Form />
     </div>
   );
 }
